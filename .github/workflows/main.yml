@@ -13,6 +13,7 @@ jobs:
       - name: Passo 3
         run: echo "Verificando Qualidade de código"
   CD:
+    needs: CI
     runs-on: ubuntu-latest
     steps:
       - name: Passo 1
