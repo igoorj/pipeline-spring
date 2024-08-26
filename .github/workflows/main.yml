@@ -11,12 +11,12 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setud JDK
-        uses: actions/setup-jdk@v4
+        uses: actions/setup-java@v4
         with:
           java-version: 17
           distribution: 'corretto'
 
       - name: Compile project
-        run: mvn clean package -DskipTests
+        run: mvn -B package --file pom.xml
 
 
