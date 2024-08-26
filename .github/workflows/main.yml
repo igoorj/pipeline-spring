@@ -12,6 +12,13 @@ jobs:
         run: echo "Executando Testes"
       - name: Passo 3
         run: echo "Verificando Qualidade de código"
+      - name: echo "Baixando o código da aplicação"
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: 'corretto'
+          java-version: '17'
+      - run: mvn clean package -DskipTests
   CD:
     needs: CI
     runs-on: ubuntu-latest
