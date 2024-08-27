@@ -58,4 +58,4 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: igoorj/app:1.0
+          tags: igoorj/app:latest
