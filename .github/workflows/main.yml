@@ -41,15 +41,7 @@ jobs:
     name: Build Docker image
     runs-on: ubuntu-latest
     steps:
-      - name: Baixando o código
-        uses: actions/checkout@v4
-
-      - name: Setud JDK
-        uses: actions/setup-java@v4
-        with:
-          java-version: 17
-          distribution: 'corretto'
-
+      -
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
 
@@ -66,4 +58,4 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: igoorj/app:latest
+          tags: igoorj/app:1.0
