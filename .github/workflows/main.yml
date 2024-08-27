@@ -61,4 +61,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: igoorj/spring-pipeline:1.0
+          tags: igoorj/spring-pipeline:latest
